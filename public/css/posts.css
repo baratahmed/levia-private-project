@@ -1,0 +1,333 @@
+.create-post {
+  position: relative;
+}
+.create-post .uploading-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.2s ease-in-out;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-form {
+  background: white;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px #eceff5;
+  border-radius: 5px;
+  border: 2px solid #eceff5;
+}
+.post-form .post-header {
+  font-weight: 500;
+  border-bottom: 2px solid #eceff5;
+  display: flex;
+}
+.post-form .post-header > div {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-bottom: 1px solid white;
+}
+.post-form .post-header > div:hover {
+  border-bottom-color: #019be1;
+}
+.post-form .post-header .active {
+  background: white;
+  border-bottom-color: #019be1;
+}
+.post-form .post-title {
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 0;
+}
+.post-form #post_content {
+  font-size: 14px;
+  resize: none;
+  border-radius: 0;
+}
+.post-form .attached-images {
+  padding: 10px 10px 5px;
+  display: none;
+}
+.post-form .attached-images .images-container .single-image {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  position: relative;
+  margin-right: 10px;
+}
+.post-form .attached-images .images-container .single-image:hover .image-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.post-form .attached-images .images-container .single-image:hover .cancel-image {
+  display: block;
+}
+.post-form .attached-images .images-container .single-image .the-image {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.post-form .attached-images .images-container .single-image .image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s ease-in-out;
+}
+.post-form .attached-images .images-container .single-image .cancel-image {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color: white;
+  cursor: pointer;
+  transition: display 0.2s ease-in-out;
+}
+.post-form .has-images {
+  display: flex !important;
+}
+.post-form .submit-options {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eceff5;
+}
+.post-form .submit-options #AddImageButton i {
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+#attached_images {
+  display: none;
+}
+
+.single-post {
+  box-shadow: 0 0 5px #eceff5;
+  border-radius: 5px;
+  border: 2px solid #eceff5;
+  margin-bottom: 10px;
+}
+.single-post .bordered-bottom {
+  border-bottom: 2px solid #eceff5;
+}
+.single-post .bordered-top {
+  border-top: 2px solid #eceff5;
+}
+.single-post .post-header {
+  display: flex;
+  padding: 10px 10px 0;
+}
+.single-post .post-header .sticky-post-box {
+  font-size: 12px;
+}
+.single-post .post-header .sticky-post-box i {
+  color: #019be1;
+}
+.single-post .post-header .post-title a {
+  color: black;
+  text-decoration: none;
+}
+.single-post .post-header .post-title h4 {
+  font-size: 18px;
+}
+.single-post .post-header .post-user-img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-top: -2px;
+}
+.single-post .post-header .name-box, .single-post .post-header .post-time {
+  font-size: 12px;
+  color: #787C7E;
+}
+.single-post .post-header .name-box a, .single-post .post-header .post-time a {
+  color: #787C7E;
+  font-weight: 500;
+}
+.single-post .post-header .upvote-downvote {
+  display: flex;
+  align-items: flex-start;
+}
+.single-post .post-header .upvote-downvote div.upvote-box i, .single-post .post-header .upvote-downvote div.downvote-box i {
+  font-size: 28px;
+  cursor: pointer;
+}
+.single-post .post-header .upvote-downvote div.upvote-box i:hover, .single-post .post-header .upvote-downvote div.downvote-box i:hover {
+  color: #019BE1;
+}
+.single-post .post-header .upvote-downvote div.upvote-box i.fas, .single-post .post-header .upvote-downvote div.downvote-box i.fas {
+  color: #019BE1;
+}
+.single-post .post-header .upvote-downvote .votes-count {
+  min-width: 35px;
+  max-width: 35px;
+  text-align: center;
+  margin-top: 2px;
+  overflow: hidden;
+}
+.single-post .post-body {
+  padding: 10px;
+  color: #1a1a1a;
+}
+.single-post .post-images {
+  max-width: 400px;
+}
+.single-post .post-images .single-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.single-post .post-images .single-image:hover img {
+  transform: scale(1.01);
+}
+.single-post .post-images .single-image:hover .overlay {
+  background: rgba(0, 0, 0, 0.1);
+}
+.single-post .post-images .single-image .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease-in-out;
+}
+.single-post .post-images .single-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.single-post .post-options {
+  padding: 0;
+}
+.single-post .post-meta {
+  padding: 5px 10px;
+  display: flex;
+  font-size: 13px;
+}
+.single-post .post-meta a {
+  color: #4c604c;
+}
+.single-post .post-meta .upvotes-meta {
+  flex-grow: 1;
+}
+.single-post ul.all-comments {
+  background: #f9f9f9;
+  padding-left: 10px;
+  list-style-type: none;
+}
+.single-post ul.all-comments li.single-comment {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #efefef;
+}
+.single-post ul.all-comments li.single-comment .comment-user-image img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-top: -2px;
+}
+.single-post ul.all-comments li.single-comment .comment-user-name {
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 13px;
+}
+.single-post ul.all-comments li.single-comment .points-count {
+  font-size: 12px;
+}
+.single-post ul.all-comments li.single-comment .comment-time {
+  font-size: 12px;
+}
+.single-post ul.all-comments li.single-comment .comment {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote {
+  display: flex;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .comments-count {
+  color: black;
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .comments-count i {
+  font-size: 13px;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .comments-count:hover {
+  text-decoration: none;
+  background: #ccc;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .comments-count span {
+  font-size: 12px;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .reply-button {
+  font-size: 14px;
+  color: black;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+.single-post ul.all-comments li.single-comment .comment-upvote-downvote .downvote-box {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.single-post ul.all-comments li.single-comment .replies-container .comments-count {
+  color: black;
+  font-size: 14px;
+}
+.single-post ul.all-comments li.single-comment .replies-container .nested-comments {
+  display: none;
+}
+.single-post ul.all-comments .more-comments div {
+  padding: 5px;
+  color: #4c604c;
+  text-align: center;
+  font-size: 13px;
+}
+.single-post ul.all-comments .more-comments div a {
+  color: #4c604c;
+}
+.single-post ul.all-comments .more-comments div a:hover {
+  text-decoration: underline;
+}
+.single-post ul.nested-comments {
+  padding-left: 30px;
+}
+.single-post .comment-box {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.single-post .comment-box .user-display-image {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.single-post .comment-box .user-display-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.single-post .comment-box .comment-input {
+  flex-grow: 1;
+}
+.single-post .comment-box .comment-input textarea {
+  border-width: 0;
+  resize: none;
+}
