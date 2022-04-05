@@ -18,7 +18,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="home-content">
                         {{-- <h1 class="white-text">Bring your business to online</h1> --}}
-                        <h1 class="white-text">Code is Updated</h1>
+                        <h1 class="white-text">Another Test</h1>
                         <p class="white-text lead">You've made your decision, we've arranged the platform</p>
                         @if(!auth('radmin')->check())
                             <a href="{{ route('getRegister') }}"><button class="btn-primary">Start your journey</button></a>
