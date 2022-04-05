@@ -35,7 +35,7 @@
 <body>
 
 	@if(isset($home))
-		@include('theme_landing.parts.header-home')
+		{{-- @include('theme_landing.parts.header-home') --}}
 	@else
 		@include('theme_landing.parts.header')
 	@endif

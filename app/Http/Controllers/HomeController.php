@@ -159,6 +159,8 @@ class HomeController extends Controller
     }
 
     public function postRegister(Request $r){
+
+        
         $this->validate($r, [
             'email' => 'required|email|unique:rest_admins|max:255',
             'password' => 'required|min:6|max:255',

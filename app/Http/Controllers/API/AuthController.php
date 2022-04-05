@@ -115,6 +115,7 @@ class AuthController extends Controller
 
     public function login(Request $request){
 
+
         $this->validate($request, [
             'phone' => 'required|min:10|max:14',
             'password' => 'required|min:8'
